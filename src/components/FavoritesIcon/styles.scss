@@ -1,0 +1,67 @@
+@import '../../assets/vars.scss', '../../assets/colors.scss';
+
+.favIcon {
+  font-size: 50px;
+  color: $color-red;
+  text-align: center;
+  position: relative;
+  margin-top: -.5rem;
+  z-index: 10000;
+
+  &__wrapper {
+    cursor: pointer;
+    display: inline-block;
+    top: -.1rem;
+    position: relative;
+  }
+
+  &__counter {
+    color: white;
+    position: absolute;
+    font-size: 1.3rem;
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1.15rem;
+    text-shadow: 0 0 2px black;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-top: 1px solid $color-title;
+    width: 45%;
+    left: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-top: 1px solid $color-title;
+    width: 45%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: $site-sm) {
+  .favIcon {
+    margin-top: -.1rem;
+
+    &__wrapper {
+      top: -.5rem;
+      &:hover .favIcon__tooltip {
+        display: none;
+      }
+    }
+
+    &::before {
+      width: 40%;
+    }
+
+    &::after {
+      width: 40%;
+    }
+  }
+}

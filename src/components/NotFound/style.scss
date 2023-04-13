@@ -1,0 +1,40 @@
+@import '../../assets/vars.scss', '../../assets/colors.scss';
+@import url(https://fonts.googleapis.com/css?family=Gentium+Plus:regular&display=swap);
+
+.nf {
+    text-align: center;
+    background-color: $color-background;
+    height: 100vh;
+    padding: 5rem 0;
+    font-family: "Gentium Plus";
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: $color-title;
+
+
+    &__img {
+        margin: 0 auto;
+        padding: 2rem 0;
+
+        & img {
+            width: 20rem;
+        }
+    }
+
+    &__button {
+        border: none;
+        outline: none;
+        background-color: white;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        color: #000;
+        transition: .3s;
+
+        &:hover {
+            color: $color-title;
+            box-shadow: 0 0 10px 5px #000000aa;
+        }
+    }
+}

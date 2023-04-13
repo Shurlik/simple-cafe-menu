@@ -1,0 +1,259 @@
+@import '../../../../assets/vars.scss', '../../../../assets/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+
+.item {
+  display: flex;
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+
+
+  &__edit {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $color-background-light;
+  }
+
+  &__image {
+    margin-right: 10px;
+
+
+    &--pic {
+      max-width: 100px;
+
+    }
+  }
+
+  &__simpleText {
+    font-weight: normal;
+  }
+
+  &__data {
+  }
+
+  &__index {
+    font-weight: bold;
+    padding-right: 15px;
+  }
+
+  &__title {
+    font-weight: bold;
+    padding-top: 10px;
+
+  }
+
+  &__description {
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
+  &__category {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  &__details {
+    display: flex;
+  }
+
+  &__price {
+    padding-top: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+
+    &--num {
+    }
+  }
+
+  &__av {
+    background-color: greenyellow;
+
+  }
+
+  &__nav {
+    background-color: pink
+  }
+
+  &--edit {
+    cursor: pointer;
+    border: 1px solid $color-title;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: $color-title;
+    transition: .3s;
+    user-select: none;
+
+    &:hover {
+      color: #fff;
+      background-color: $color-title;
+
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 3rem;
+
+    &--edit {
+      cursor: pointer;
+      border: 1px solid $color-title;
+      border-radius: 10px;
+      padding: 5px 10px;
+      color: $color-title;
+      transition: .3s;
+      user-select: none;
+
+      &:hover {
+        color: #fff;
+        background-color: $color-title;
+
+      }
+    }
+  }
+}
+
+.edit {
+  border-color: $color-background-light;
+  padding: 20px;
+  font-size: 2rem;
+  overflow-y: scroll;
+
+  &__wrapper {
+    max-width: $site-max-width;
+  }
+
+  &__error {
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+    border: 2px solid red;
+    margin: .5rem;
+  }
+
+  &__container {
+    display: flex;
+    gap: 5rem
+  }
+
+  &__image {
+    width: 250px;
+    border-radius: 20px;
+
+
+    & img {
+      width: 100%;
+      box-shadow: 0 0 10px 1px #000;
+      border-radius: 20px;
+
+    }
+  }
+
+  &__waiting {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin: 0 auto;
+    animation-name: colors;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  & form input[type=checkbox] {
+    width: 3rem;
+  }
+
+  &__btn {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  &__fileChoose {
+    justify-content: center;
+    box-shadow: 0 2px 5px .1px $color-title;
+    font-size: 1.5rem;
+
+    & button {
+      height: 2rem;
+      padding: 0 15px;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__fileField {
+    &--text {
+      font-size: 1.5rem;
+    }
+
+    &--checkbox {
+      padding: 0;
+      margin: 0 !important;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    flex-basis: 100px;
+
+    &:first-child input {
+      width: 5rem;
+    }
+
+    & input {
+      height: 2rem;
+      width: 25rem;
+      margin-right: 20px;
+      font-size: 1.3rem;
+    }
+
+    & input[type=number] {
+      width: 4rem;
+    }
+
+    & input[type=checkbox] {
+      width: 2rem;
+      height: 2rem;
+      margin-left: 10px;
+    }
+
+    & select {
+      width: 15rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    & span {
+      padding-right: 10px;
+    }
+  }
+}
+
+@keyframes colors {
+  from {
+    background-color: $color-title
+  }
+
+  50% {
+    background-color: $color-secondary
+  }
+
+  to {
+    background-color: $color-title
+  }
+
+}

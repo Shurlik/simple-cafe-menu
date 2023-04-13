@@ -1,0 +1,47 @@
+@import '../../assets/vars.scss', '../../assets/colors.scss';
+
+.orderIcon {
+  transition: .3s;
+  height: 5rem;
+  width: 5rem;
+  border: 1px solid $color-white-transparent;
+  border-radius: 50%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3%;
+  background-color: $color-black-transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white-transparent;
+  font-size: 3rem;
+  cursor: pointer;
+  text-align: center;
+
+  &__test {
+    color: $color-gold;
+    font-size: 1rem;
+    position: absolute;
+    text-shadow: 0 0 1px $color-shadow;
+    font-weight: bold;
+    top: 5%;
+  }
+
+  &:hover {
+    color: $color-title-light;
+    background-color: $color-white-transparent;
+    border: 1px solid $color-black-transparent;
+
+  }
+}
+
+@media screen and (max-width: $site-lg) {
+  .orderIcon {
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.8rem;
+
+  }
+}

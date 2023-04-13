@@ -1,0 +1,37 @@
+@import '../../assets/vars.scss', '../../assets/colors.scss';
+
+.close {
+  background-color: $color-text;
+  height: 2px;
+  width: 25px;
+  position: absolute;
+
+  &__wrapper {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__1 {
+    transform: rotate(45deg);
+  }
+
+  &__2 {
+    transform: rotate(-45deg);
+
+  }
+}
+
+@media screen and (max-width: $site-lg) {
+  .close {
+    &__wrapper {
+      display: flex;
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+@import '../../assets/colors.scss', '../../assets/vars.scss';
+
+.delivery {
+  &__taxi {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: $site-lg) {
+  .delivery {
+    &__text {
+      font-size: 1.2rem;
+      line-height: 2.5rem;
+    }
+  }
+}

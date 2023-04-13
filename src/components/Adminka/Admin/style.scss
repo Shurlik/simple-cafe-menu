@@ -1,0 +1,90 @@
+@import '../../../assets/vars.scss', '../../../assets/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+
+.admin {
+  max-width: $site-max-width;
+  padding: 5px 30px;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5rem;
+  }
+
+  &__announcement {
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #000;
+
+    &--text {
+      display: inline-block;
+      padding: 10px 10px;
+      margin: 0 20px;
+      font-size: 1.2rem;
+      width: 50%;
+    }
+
+    &--edit {
+      cursor: pointer;
+      border: 1px solid $color-title;
+      border-radius: 10px;
+      padding: 10px 10px;
+      color: $color-title;
+      transition: .3s;
+      user-select: none;
+      margin: 15px auto;
+      display: block;
+      width: 10rem;
+      text-align: center;
+
+      &:hover {
+        color: #fff;
+        background-color: $color-title;
+
+      }
+    }
+  }
+
+  &__content {
+    text-align: left;
+
+  }
+
+  &__exit {
+    font-size: 1.5rem;
+    text-align: right;
+    cursor: pointer;
+    transition: .3s;
+    padding: 15px;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    background-color: lightgrey;
+
+    &:hover {
+      color: $color-title
+    }
+  }
+
+  &__search {
+    border: 1px solid $color-text;
+    padding: 15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+
+    &--type select {
+      padding: 5px 10px;
+      font-size: 1.2rem;
+    }
+  }
+
+
+}

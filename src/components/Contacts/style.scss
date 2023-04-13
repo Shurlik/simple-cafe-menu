@@ -1,0 +1,76 @@
+@import '../../assets/vars.scss', '../../assets/colors.scss';
+
+.contacts {
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+  }
+
+  &__insta,
+  &__maps,
+  &__phone,
+  &__delivery {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $color-text;
+    padding: 5px 0;
+    font-size: 1.4rem;
+  }
+
+  & a {
+    color: $color-title;
+  }
+
+  &__delivery {
+    color: $color-title;
+    font-weight: bold;
+  }
+
+  &__insta {
+    color: $color-link;
+    font-size: 1.4rem
+  }
+
+  & a {
+    transition: .2s;
+    padding: 5px 0;
+
+  }
+
+  & a:hover {
+    color: $color-title;
+    text-decoration: underline;
+  }
+
+  &__close {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: $site-lg) {
+  .contacts {
+    transition: .5s;
+    position: fixed;
+    right: -200vw;
+    top: 0;
+    background-color: #ffffffee;
+    z-index: 99999;
+    box-shadow: 1px 1px 20px 2px $color-text;
+    border-bottom-left-radius: 20px;
+    padding: 50px 30px;
+
+    &__show {
+      right: 0;
+    }
+  }
+}

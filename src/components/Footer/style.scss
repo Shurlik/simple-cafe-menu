@@ -1,0 +1,10 @@
+@import '../../assets/vars.scss';
+
+.footer {
+    &__wrapper {
+        max-width: $site-max-width;
+        margin: auto;
+        width: 100%;
+        height: 5em;
+    }
+}

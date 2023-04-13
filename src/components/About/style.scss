@@ -1,0 +1,16 @@
+.about {
+  &__sliderContainer {
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  &__image {
+    width: 100%;
+
+    & img {
+      width: 400px;
+
+    }
+  }
+}

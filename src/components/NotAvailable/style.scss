@@ -1,0 +1,25 @@
+@import '../../assets/vars.scss', '../../assets/colors.scss';
+@import url(https://fonts.googleapis.com/css?family=Gentium+Plus:regular&display=swap);
+
+.na {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ffffffaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  border-radius: 10px;
+
+  &--text {
+    color: $color-title;
+    font-weight: bold;
+    font-size: 3.5rem;
+    transform: rotate(-25deg);
+    user-select: none;
+    font-family: "Gentium Plus";
+  }
+}

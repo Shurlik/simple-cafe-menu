@@ -1,0 +1,131 @@
+@import '../../assets/colors.scss', '../../assets/vars.scss';
+
+.body {
+  overflow-x: hidden;
+
+  &__wrapper {
+    display: flex;
+    max-width: $site-max-width;
+    margin: 0 auto;
+    flex: 1 1;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__sepLine {
+    width: 1px;
+    background-color: $color-background-light
+  }
+}
+
+.menuHeader {
+  text-align: center;
+  border-bottom: 1px solid $color-title;
+  display: block;
+  padding: 0 0 1rem 0;
+  position: sticky;
+  top: 0;
+  margin-bottom: 10px;
+  z-index: 9999;
+  background-color: $color-menu-background;
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem
+  }
+
+  &__title {
+    font-family: "Gentium Plus";
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $color-text;
+    padding: 0 0.1rem 0 0;
+    flex-grow: 0;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: $site-max-width;
+    margin: 0 auto;
+    text-align: center;
+    gap: 1.2rem;
+    transition: 1s;
+  }
+
+  &__button {
+    font-family: "Gentium Plus";
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    background-color: $color-title-light;
+    max-width: 12rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px 0.1px $color-text;
+    transition: .3s;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-title;
+      box-shadow: 0 0 10px 1px $color-text;
+
+    }
+  }
+
+  &__id {
+    color: $color-text;
+    font-size: 1.5rem;
+  }
+
+  &__menuText {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: $site-lg) {
+  .body {
+    &__sepLine {
+      display: none;
+    }
+  }
+
+  .menuHeader {
+    display: block;
+    padding: .8rem .5rem;
+    border-bottom: 1px solid $color-title;
+    margin-top: -1.8rem;
+
+    &__content {
+      justify-content: space-between;
+      padding: 0 1rem;
+      align-items: center;
+      max-width: $site-max-width;
+      margin: 0 auto;
+      flex-direction: row;
+    }
+
+    &__id {
+      color: $color-text;
+      font-size: 1.1rem;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      max-width: 50%;
+      text-align: left;
+    }
+
+    &__menuText {
+      font-size: 1.5rem;
+    }
+  }
+}

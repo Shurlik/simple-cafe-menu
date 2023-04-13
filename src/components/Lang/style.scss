@@ -1,0 +1,19 @@
+.lang {
+  &__icon {
+    cursor: pointer;
+    border-radius: 50rem;
+    padding: 5px;
+    transition: .2s;
+
+    & img {
+      overflow: hidden;
+      border-radius: 50rem;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+
+    &--na {
+      opacity: .4;
+    }
+  }
+}

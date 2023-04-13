@@ -1,0 +1,74 @@
+@import '../../assets/vars.scss', '../../assets/colors.scss';
+
+.wrapper {
+  &__login {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2vh;
+    z-index: 10000;
+    animation-name: show;
+    animation-duration: .5s;
+  }
+
+  &__button {
+    text-align: right;
+    padding: 5px 10px;
+
+    & span {
+      cursor: pointer;
+      padding: 5px;
+      font-size: 1.2rem;
+      color: $color-background;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__image {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 60%;
+    z-index: -2;
+    display: flex;
+    border-width: 1px;
+  }
+
+  &__image2 {
+    position: fixed;
+    bottom: -5rem;
+    left: -3rem;
+    height: 60%;
+    z-index: -1;
+    display: flex;
+    border-width: 1px;
+  }
+}
+
+@keyframes show {
+  from {
+    top: -100vh;
+  }
+
+  to {
+    top: 2vh;
+
+  }
+}
+
+@media screen and (max-width: $site-lg) {
+  .wrapper {
+
+  }
+
+  .wrapper__login {
+    display: none;
+  }
+
+  .wrapper__button {
+    display: none;
+  }
+}

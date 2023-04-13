@@ -1,0 +1,40 @@
+@import '../../assets/vars.scss', '../../assets/colors.scss';
+@import url(https://fonts.googleapis.com/css?family=Gentium+Plus:regular,700&display=swap);
+
+.ann {
+  box-shadow: 0 0 5px 5px $color-background-light;
+  background-color: $color-background-light;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  padding: .5rem 2rem;
+  display: inline-block;
+  text-align: center;
+
+  &__info {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: color 1s infinite;
+    font-family: "Gentium Plus";
+  }
+}
+
+@keyframes color {
+
+  0% {
+    color: orangered;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: orangered
+  }
+}
+
+@media screen and (max-width: $site-lg) {
+  .ann{
+    &__info{
+      font-size: 1.3rem;
+    }
+  }
+}

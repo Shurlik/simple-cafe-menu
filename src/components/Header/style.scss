@@ -1,0 +1,106 @@
+@import '../../assets/vars.scss', '../../assets/colors.scss';
+@import url(https://fonts.googleapis.com/css?family=Gentium+Plus:regular&display=swap);
+
+
+.header {
+  user-select: none;
+  width: 100%;
+  font-family: "Gentium Plus";
+  z-index: 1000;
+  margin: 0 auto;
+
+  &__main {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+    max-width: $site-max-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $color-title;
+    font-size: 5rem;
+    font-weight: bold;
+  }
+
+  &__menu {
+    font-size: 3rem;
+  }
+
+  &__icon {
+    display: none;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__sale {
+    font-weight: bold;
+    margin: 20px auto 0;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding: 5px 0;
+
+    &--blue {
+      color: $color-blue
+    }
+
+    &--yellow {
+      margin-top: .3rem;
+      color: $color-gold
+    }
+  }
+}
+
+@media screen and (max-width: $site-lg) {
+  .header {
+    &__wrapper {
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: .5rem 0;
+    }
+
+    &__icon {
+      display: block;
+      cursor: pointer;
+    }
+
+    &__title {
+      font-size: 3.5rem;
+    }
+
+    &__menu {
+      font-size: 2rem;
+    }
+
+    &__sale {
+      margin-top: 10px;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: $site-sm) {
+  .header {
+    &__title {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    &__menu {
+      font-size: 1.7rem;
+    }
+
+    &__wrapper {
+      //justify-content: space-around;
+      padding: .3rem 0;
+    }
+  }
+}
